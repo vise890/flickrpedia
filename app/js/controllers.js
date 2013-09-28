@@ -2,10 +2,7 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
-
-  }])
-  .controller('MyCtrl2', [function() {
-
+angular.module('flickrpedia.controllers', []).
+  controller('Main', ['$scope', '$routeParams', function($scope, $routeParams) {
+    $scope.term = $routeParams.term;
   }]);
