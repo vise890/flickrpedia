@@ -1,3 +1,3 @@
 get '/' do
-  'it works'
+  File.read(File.join('public', 'index.html'))
 end
