@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    dotenv (0.9.0)
     flickraw (0.9.6)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -18,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   flickraw
   shotgun
   sinatra
