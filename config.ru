@@ -1,6 +1,6 @@
 require "rubygems"
 require "bundler/setup"
-require "sinatra"
+Bundler.require(:default)
 require "./app.rb"
 
 set :run, false
