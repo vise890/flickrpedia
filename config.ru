@@ -1,7 +1,5 @@
-require "rubygems"
-require "bundler/setup"
-require "sinatra"
-require "./app.rb"
+
+require './environment.rb'
 
 set :run, false
 set :raise_errors, true
