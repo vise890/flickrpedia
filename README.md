@@ -15,9 +15,3 @@ flickr_shared_secret = "shared+secret+blah_blah"
 `$ brew install redis`
 2. Run Redis
 `$ redis-server /usr/local/etc/redis.conf`
-
-## Configuring dev environment
-Add this to your `.env`
-```
-rack_env = 'development'
-```
