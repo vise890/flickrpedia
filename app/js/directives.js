@@ -29,4 +29,13 @@ angular.module('flickrpedia.directives', [])
         ease3d:'cubic-bezier(0.222, 0.025, 0.275, 0.475)',
       });
     };
+  })
+  .directive('expander', function() {
+    return function(scope, elm, attrs) {
+      $(elm).click(function(evt) {
+        $('#expand1').toggleClass('expanded');
+        $('#expand2').toggleClass('expanded');
+        $('#expand3').toggleClass('expanded');
+      });
+    };
   });

@@ -6,13 +6,13 @@
     </aside>
   </article>
 
-  <header class="title-container pure-u-1-3 text-box article-box">
+  <header class="title-container pure-u-1-3 text-box article-box" id="expand1">
     <h1 class="text-box-head">{{article.title}}</h1>
   </header>
-  <article class="pure-u-2-3 text-box">
-    <div ng-bind-html-unsafe="article.text | truncate"></div>
+  <article class="pure-u-2-3 text-box" id="expand3">
+    <div ng-bind-html-unsafe="article.text" class="text-box" style="height: 140px;" id="expand2"></div>
     <div class='display-more'>
-      <a href="#"><i class="icon-chevron-down"></i> More <i class="icon-chevron-down"></i></a>
+      <button expander class="buttonless"><i class="icon-chevron-down"></i> More <i class="icon-chevron-down"></i></button>
     </div>
   </article>
 
