@@ -11,13 +11,20 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
+  <div id="kenburns-slideshow" slideshow></div>
+  <div class="landing-bar">
+    <form class="pure-form">
+      <input type="text" placeholder="What do you want to explore?" on-keyup="">
+    </form>
+  </div>
+
   <header class="main-head">
     <div class="header"><h1>Flickrpedia</h1></div>
-    <form class="pure-form">
+<!--     <form class="pure-form">
       <input type="text" placeholder="Search" on-keyup="">
-    </form>
+    </form> -->
   </header>
-  <div ng-view></div>
+  <div class="below-header" ng-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
