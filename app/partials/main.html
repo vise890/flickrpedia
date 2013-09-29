@@ -10,9 +10,9 @@
     <h1 class="text-box-head">{{article.title}}</h1>
   </header>
   <article class="pure-u-2-3 text-box">
-    <span ng-bind-html-unsafe="article.text | truncate"></span>
+    <div ng-bind-html-unsafe="article.text | truncate"></div>
     <div class='display-more'>
-      <a href="#">- Display More -</a>
+      <a href="#"><i class="icon-chevron-down"></i> More <i class="icon-chevron-down"></i></a>
     </div>
   </article>
 
