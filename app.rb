@@ -11,7 +11,7 @@ get '/api/:search_term' do
     return cached_article
   else
 
-    article = Article.find(search_term).to_json
+    article = Article.find(search_term)
     raise 'No images found!' if article.images.empty?
 
     cached_article = article.to_json
