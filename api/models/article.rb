@@ -27,6 +27,7 @@ class Article
     source = open(self.url).read
     @content = Readability::Document.new(source, tags: %w[div p a], attributes: %w[href]).content
     @content.gsub!(%r!href="/wiki!, "href=\"#")
+    @content.gsub!(/\[\d+\]/, "")
   end
 
   def to_json
