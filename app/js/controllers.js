@@ -8,6 +8,7 @@ angular.module('flickrpedia.controllers', ['ngResource']).
     var results = Search.get({'term': $routeParams.term}, function() {
       $scope.results = results.images;
       $scope.article.title = results.title;
+      $scope.article.text = results.content;
     });
     $scope.term = $routeParams.term;
     $scope.article = {
