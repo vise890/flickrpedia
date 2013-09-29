@@ -1,11 +1,7 @@
 article_titles = %w[
   mammal
-  zebra
-  otter
-  monkey
-  grasshopper
-  gecko
-  chameleons
+  reptile
+  crocodilia
 ]
 
 
