@@ -1,12 +1,6 @@
 class Article
 
-  require 'flickraw'
-  require 'wikipedia'
-
-  FlickRaw.api_key= ENV['api_key']
-  FlickRaw.shared_secret=ENV['shared_secret']
-
-  attr_reader :title, :pictures, :content
+  attr_accessor :title, :images, :content
 
   def initialize(args)
     @title =  args[:title]
@@ -24,7 +18,7 @@ class Article
     page = Wikipedia.find(term)
     args = {title: page.title, content: page.content }
     article = Article.new(args)
-    article.images = article.get_images(article.title).map{|urls| Image.new({url: url}) }
+    article.images = article.get_images(article.title).map{|url| Image.new({url: url}) }
     article
   end
 end

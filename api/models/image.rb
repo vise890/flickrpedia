@@ -1,6 +1,6 @@
 class Image
 
-  def intialize(args)
+  def initialize(args)
     @url = args[:url]
   end
 end
