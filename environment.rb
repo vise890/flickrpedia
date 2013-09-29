@@ -9,7 +9,7 @@ require 'json'
 require 'open-uri'
 
 # setup Redis
-if ENV['rack_env'] == 'development'
+if development?
   $redis_client = Redis.new
 else
   redis_uri = URI.parse(ENV['REDISTOGO_URL'])
