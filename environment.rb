@@ -6,6 +6,7 @@ Bundler.require(:default)
 
 # require std lib stuff
 require 'json'
+require 'open-uri'
 
 # load environment variables
 # (needed for api key)
