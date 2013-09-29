@@ -25,7 +25,8 @@ class Article
   def content
     return @content if @content
     source = open(self.url).read
-    @content = Readability::Document.new(source, tags: %w[div p a]).content
+    @content = Readability::Document.new(source, tags: %w[div p a], attributes: %w[href]).content
+    @content.gsub!(%r!href="/wiki!, "href=\"#")
   end
 
   def to_json
