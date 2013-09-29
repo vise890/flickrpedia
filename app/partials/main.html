@@ -8,7 +8,7 @@
   <article class="pure-u-2-3 text-box">
     <div class="article-box">
       <header><h1>{{article.title}}</h1></header>
-      <div ng-bind-html-unsafe="article.text">{{article.text}}</div>
+      <div ng-bind-html-unsafe="article.text | truncate"></div>
     </div>
   </article>
   <article class="pure-u-1-3 photo-box" ng-repeat="result in results" ng-hide="$first">
