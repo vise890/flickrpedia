@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/base-min.css">
+	<link rel="stylesheet" href="css/fancyInput.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/kenburns.js"></script>
+  <script src='js/fancyInput.js'></script>
+</head>
+<body>
+	<header class="main-head">
+    <div class="header"><h1>Flickrpedia</h1></div>
+  </header>
+
+	<div id="kenburns-slideshow">
+
+	<div id='content'>
+      <section class='input'>
+        <div>
+          <input type='text'>
+        </div>
+      </section>
+      <section class='textarea'>
+        <div>
+          <textarea cols='1'></textarea>
+        </div>
+      </section>
+    </div>
+	</div>
+
+</div>
+
+	<script>
+    $('section :input').val('').fancyInput()[0].focus();
+
+    $('.fancyInput').on('click', function(){
+      console.log($(this));
+
+    });
+
+  	function init(str){
+  			var input = $('section input').val('')[0],
+  				s = 'what do you want to discover?'.split('').reverse(),
+  				len = s.length-1,
+  				e = $.Event('keypress');
+
+  			var	initInterval = setInterval(function(){
+  					if( s.length ){
+  						var c = s.pop();
+  						fancyInput.writer(c, input, len-s.length).setCaret(input);
+  						input.value += c;
+  					}
+  					else clearInterval(initInterval);
+  			},150);
+  		}
+
+  		init();
+
+ </script>
+
+
+	<script type="text/javascript">
+
+
+	$(document).ready(function() {
+	    $('#kenburns-slideshow').Kenburns({
+	    	images: [
+	    		"images/image0.jpg",
+	    		"images/image1.jpg",
+	    		"images/image2.jpg",
+	    		"images/image3.jpg",
+	    		"images/image4.jpg",
+	    		"images/image5.jpg"
+	    	],
+	    	scale:0.75,
+	    	duration:8000,
+	    	fadeSpeed:1200,
+	    	ease3d:'cubic-bezier(0.222, 0.025, 0.275, 0.475)',
+	    });
+	});
+	</script>
+</body>
+</html>
