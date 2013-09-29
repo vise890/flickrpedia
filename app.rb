@@ -4,5 +4,6 @@ end
 
 get '/api/:search_term' do
   content_type :json
-  Article.find(params['search_term']).to_json
+  search_term = params['search_term'].gsub('-', ' ')
+  Article.find(search_term).to_json
 end
