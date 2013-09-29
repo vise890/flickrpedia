@@ -12,7 +12,20 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #999;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .main-head {
+  background: black;
   background: rgba(28, 28, 50, 0.9);
   opacity: 0.99;
   padding-left: 10px;
