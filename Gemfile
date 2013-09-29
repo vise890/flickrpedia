@@ -12,3 +12,5 @@ gem 'wikipedia-client', require: 'wikipedia'
 gem 'ruby-readability', require: 'readability'
 
 gem 'flickraw'
+
+gem 'redis'

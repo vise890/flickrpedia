@@ -8,6 +8,9 @@ Bundler.require(:default)
 require 'json'
 require 'open-uri'
 
+# setup Redis
+$redis_client = Redis.new
+
 # load environment variables
 # (needed for api key)
 Dotenv.load
