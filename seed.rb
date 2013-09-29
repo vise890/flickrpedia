@@ -1,0 +1,15 @@
+article_titles = %w[
+  mammal
+  zebra
+  otter
+  monkey
+  grasshopper
+  gecko
+  chameleons
+]
+
+
+article_titles.each do |title|
+  #`open http://flickrpedia.herokuapp.com/#/#{title}`
+  `open http://localhost:9393/#/#{title}`
+end
