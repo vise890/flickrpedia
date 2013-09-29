@@ -9,7 +9,7 @@ class Article
   end
 
   def get_images(tag)
-    search_args = { tags: tag, per_page: 10  }
+    search_args = { tags: tag, per_page: 10, sort: 'interestingness-desc' }
     discovered_pictures = flickr.photos.search search_args
     discovered_pictures.map{|pic| FlickRaw.url pic}
   end
