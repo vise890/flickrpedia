@@ -1,29 +1,25 @@
 class Article
 
-  attr_accessor :title, :images, :content
+  attr_accessor :title, :content
 
   def initialize(args)
     @title =  args[:title]
     @content = args[:content]
-    @images =  []
   end
 
-  def get_images(tag)
-    search_args = { tags: tag, per_page: 10, sort: 'interestingness-desc' }
-    discovered_pictures = flickr.photos.search search_args
-    discovered_pictures.map{|pic| FlickRaw.url pic}
+  def images
+    raise 'No title for current article' unless title
+    @images || Image.search(title)
   end
 
   def self.find(term)
     page = Wikipedia.find(term)
     args = {title: page.title, content: page.content }
-    article = Article.new(args)
-    article.images = article.get_images(article.title).map{|url| Image.new({url: url}) }
-    article
+    Article.new(args)
   end
 
   def to_json
-    images = @images.map do |image|
+    images = images.map do |image|
       JSON.parse image.to_json
     end
 
