@@ -9,7 +9,7 @@ angular.module('flickrpedia', [
       'flickrpedia.controllers']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/:term', {
-      templateUrl: 'partials/main.html',
+      templateUrl: 'partials/landing.html',
       controller: 'Main'});
     $routeProvider.otherwise({redirectTo: '/san-francisco'});
   }]);
