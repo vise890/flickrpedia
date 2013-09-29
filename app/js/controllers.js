@@ -32,16 +32,19 @@ angular.module('flickrpedia.controllers', []).
         url: 'http://farm5.staticflickr.com/4005/4204497503_cacf3abe74_o.jpg'
       },
       {
-        url: 'http://farm5.staticflickr.com/4005/4204497503_cacf3abe74_o.jpg'
+        url: 'http://farm3.staticflickr.com/2391/1578205890_d63a07dbbe_o.jpg'
       },
       {
-        url: 'http://farm5.staticflickr.com/4005/4204497503_cacf3abe74_o.jpg'
+        url: 'http://farm4.staticflickr.com/3086/3204381465_a905159096_b.jpg'
       },
       {
-        url: 'http://farm5.staticflickr.com/4005/4204497503_cacf3abe74_o.jpg'
+        url: 'http://farm6.staticflickr.com/5250/5229836764_7d44e24870_o.jpg'
       },
       {
-        url: 'http://farm5.staticflickr.com/4005/4204497503_cacf3abe74_o.jpg'
+        url: 'http://farm8.staticflickr.com/7246/7535991644_a727c28a2e_b.jpg'
+      },
+      {
+        url: 'http://farm8.staticflickr.com/7246/7535991644_a727c28a2e_b.jpg'
       }
     ];
   }]);
