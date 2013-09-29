@@ -3,7 +3,10 @@ require "rubygems"
 # require all the gems in gemfile
 require "bundler/setup"
 Bundler.require(:default)
-#
+
+# require std lib stuff
+require 'json'
+
 # load environment variables
 # (needed for api key)
 Dotenv.load

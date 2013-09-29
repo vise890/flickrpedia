@@ -21,4 +21,17 @@ class Article
     article.images = article.get_images(article.title).map{|url| Image.new({url: url}) }
     article
   end
+
+  def to_json
+    images = @images.map do |image|
+      JSON.parse image.to_json
+    end
+
+    {
+      title: @title,
+      # content: @content,
+      images: images
+    }.to_json
+
+  end
 end
