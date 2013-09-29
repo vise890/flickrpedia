@@ -13,7 +13,7 @@ FlickRaw.api_key = ENV['flickr_api_key']
 FlickRaw.shared_secret = ENV['flickr_shared_secret']
 
 # Require all models (in /api/models)
-Dir["api/models/*.rb"].each { |file| require file }
+Dir["./api/models/*.rb"].each { |file| require file }
 
 # require the actual app
 require "./app.rb"
