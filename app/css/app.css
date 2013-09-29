@@ -97,6 +97,16 @@ a:hover {
   overflow-y: scroll;
 }
 
+.expanded {
+  height: auto !important;
+}
+
+.buttonless {
+  background: none;
+  border: none;
+  color: #999;
+}
+
 .article-box h1 {
   padding-bottom: 10px;
   border-bottom: 1px #fff solid;
