@@ -1,9 +1,23 @@
 /* app css stylesheet */
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 87.5%;
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+
 .photo-box, .text-box {
   overflow: hidden;
   position: relative;
   height: 250px;
+  background: rgb(28, 28, 37);
+  color: #fff;
 }
 
 .photo-box img {
@@ -12,5 +26,11 @@
 }
 
 .article-box {
-  padding: 1em;
+  padding: 2em;
+  overflow-y: scroll;
+}
+
+.article-box h1 {
+  padding-bottom: 10px;
+  border-bottom: 1px #fff solid;
 }
