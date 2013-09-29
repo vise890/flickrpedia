@@ -1,10 +1,9 @@
 class Article
 
-  attr_accessor :title, :content
+  attr_accessor :title
 
   def initialize(args)
     @title =  args[:title]
-    @content = args[:content]
   end
 
   def images
@@ -18,14 +17,25 @@ class Article
     Article.new(args)
   end
 
+
+  def url
+    "http://en.wikipedia.org/wiki/#{@title.gsub(' ', '_')}"
+  end
+
+  def content
+    return @content if @content
+    source = open(self.url).read
+    @content = Readability::Document.new(source, tags: %w[div p a]).content
+  end
+
   def to_json
     images = self.images.map do |image|
       JSON.parse image.to_json
     end
 
     {
-      title: @title,
-      # content: @content,
+      title: title,
+      content: content,
       images: images
     }.to_json
 
