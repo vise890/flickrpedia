@@ -16,6 +16,12 @@ class Image
     @flickraw_photo.title
   end
 
+  def author
+    return @author if @author
+    owner = flickr.people.getInfo({ user_id: @flickraw_photo.owner })
+    @author = owner.username
+  end
+
   def url
     FlickRaw.url @flickraw_photo
   end
@@ -23,6 +29,7 @@ class Image
   def to_json
     {
       title: title,
+      author: author,
       url: url
     }.to_json
   end
