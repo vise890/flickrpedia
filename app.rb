@@ -10,7 +10,11 @@ get '/api/:search_term' do
   if cached_article
     return cached_article
   else
-    cached_article = Article.find(search_term).to_json
+
+    article = Article.find(search_term)
+    raise 'No images found!' if article.images.empty?
+
+    cached_article = article.to_json
     $redis_client.set(search_term, cached_article)
     return cached_article
   end
