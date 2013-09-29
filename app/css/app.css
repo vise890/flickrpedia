@@ -72,6 +72,20 @@ a:hover {
   color: #fff;
 }
 
+.text-box-head {
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  width: 350px;
+  float: left;
+  margin: 10px;
+  margin-right: 40px;
+}
+
+.text-box {
+  box-sizing: border-box;
+  padding: 30px;
+}
+
 .photo-box img {
   min-height: 250px;
   width: 100%;
