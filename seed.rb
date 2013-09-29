@@ -1,4 +1,5 @@
 article_titles = %w[
+  san-francisco
   mammal
   reptile
   crocodilia
