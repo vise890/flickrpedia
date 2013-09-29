@@ -7,17 +7,26 @@
     type="image/png"
     href="/img/icon.png">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
+  <div id="kenburns-slideshow" slideshow></div>
+  <div class="landing-bar">
+    <form class="pure-form">
+      <input type="text" placeholder="What do you want to explore?" on-keyup="">
+    </form>
+  </div>
+
   <header class="main-head">
     <div class="header"><h1>Flickrpedia</h1></div>
-    <form class="pure-form">
+<!--     <form class="pure-form">
       <input type="text" placeholder="Search" on-keyup="">
-    </form>
+    </form> -->
   </header>
-  <div ng-view></div>
+  <div class="below-header" ng-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
