@@ -19,7 +19,7 @@ class Article
   end
 
   def to_json
-    images = images.map do |image|
+    images = self.images.map do |image|
       JSON.parse image.to_json
     end
 
