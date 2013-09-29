@@ -17,13 +17,29 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.99;
   padding-left: 10px;
   padding-top: 10px;
-  height: 35px;
+  height: 38px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   color: #fff;
+}
+
+.main-head .header {
+  float: left;
+  margin-top: 5px;
+}
+
+.main-head .header:after {
+  content: ".";
+  display: none;
+  clear: both;
+}
+
+.main-head form {
+  float: right;
+  margin-right: 30px;
 }
 
 .photo-box, .text-box {
